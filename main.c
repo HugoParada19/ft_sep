@@ -8,7 +8,8 @@ int	main(int ac, char **av)
 	if (ac == 2)
 	{
 		j = 0;
-		while(av[1][i])
+		i = -1;
+		while(av[1][++i])
 		{
 			write(1, &av[1][i], 1);
 			j++;
@@ -17,7 +18,6 @@ int	main(int ac, char **av)
 				write(1, "\n", 1);
 				j = 0;
 			}
-			i++;
 		}
 	}
 	return (0);
